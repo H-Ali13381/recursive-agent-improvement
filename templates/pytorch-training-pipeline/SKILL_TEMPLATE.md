@@ -1,39 +1,30 @@
 ---
-name: TODO-specialist-tool
-description: Use when TODO-specific-agent-failure needs TODO-specialist-verification.
+name: replace-me-specialist-tool
+description: Use when replace-me-trigger-condition.
 version: 0.1.0
-author: TODO
+author: replace-me
 license: MIT
 metadata:
   hermes:
-    tags: [specialist-tool, pytorch, TODO-domain]
+    tags: [replace-me]
     related_skills: []
 ---
 
-# TODO Specialist Tool
+# Replace Me Specialist Tool
 
-## Overview
-
-This skill tells the agent how to use the TODO specialist model. The model is narrow: it was trained for TODO and should only be trusted inside the boundary documented in `docs/TASK_SPEC.md`, `docs/EVAL_PLAN.md`, and `docs/MODEL_CARD.md`.
+This is a template. Replace every `replace-me` value before using it as a real skill.
 
 ## When to use
 
-Use this tool when:
-
-- TODO input matches `docs/TOOL_CONTRACT.md`
-- the agent is making the specific decision this model was trained for
-- LLM-only judgment is unreliable for this task
-- specialist verification is needed before continuing
+- replace-me: concrete trigger condition
+- replace-me: valid input condition
+- replace-me: decision this specialist is meant to support
 
 ## Do not use when
 
-Do not use this tool when:
-
-- input is outside the documented distribution
-- required preprocessing or model artifacts are missing
-- the task requires broad reasoning rather than the trained narrow judgment
-- confidence is below the documented threshold
-- the model has not been evaluated for this case
+- replace-me: out-of-scope condition
+- replace-me: invalid/missing input condition
+- replace-me: low-confidence or abstention condition
 
 ## Tool contract
 
@@ -41,12 +32,8 @@ Input:
 
 ```json
 {
-  "input": null,
-  "options": {
-    "threshold": null,
-    "return_reasons": true,
-    "abstain_below_confidence": true
-  }
+  "input": "replace-me",
+  "options": {}
 }
 ```
 
@@ -55,17 +42,14 @@ Output:
 ```json
 {
   "success": true,
-  "label": null,
-  "score": null,
-  "confidence": null,
-  "threshold": null,
+  "label": "replace-me",
+  "score": 0.0,
+  "confidence": 0.0,
+  "threshold": 0.0,
   "abstained": false,
   "reasons": [],
-  "recommended_action": null,
-  "metadata": {
-    "model_version": null,
-    "latency_ms": null
-  }
+  "recommended_action": "replace-me",
+  "metadata": {}
 }
 ```
 
@@ -74,37 +58,33 @@ Error:
 ```json
 {
   "success": false,
-  "error": "machine-readable-error-code",
-  "message": "human readable explanation",
+  "error": "replace-me-error-code",
+  "message": "replace-me human readable message",
   "metadata": {}
 }
 ```
 
 ## Interpretation rules
 
-- Low confidence means abstain or verify another way.
-- Scores only matter relative to the documented threshold.
-- Reasons are diagnostic hints, not guaranteed causes.
-- If the tool conflicts with direct evidence, investigate before acting.
-- If the tool flags high risk, address it or explicitly explain why it is being overridden.
+- replace-me: confidence threshold rule
+- replace-me: score/threshold meaning
+- replace-me: abstention behavior
+- replace-me: fallback or verification rule
 
 ## Failure handling
 
-If the tool fails, returns invalid JSON, lacks artifacts, hits device/OOM errors, or abstains:
-
-- report the exact failure
-- do not invent a specialist result
-- use a fallback only if documented
-- do not claim specialist verification occurred
+- replace-me: missing artifact behavior
+- replace-me: invalid input behavior
+- replace-me: tool/runtime failure behavior
 
 ## Related docs
 
-- `docs/TASK_SPEC.md` — task boundary and input/output definitions
-- `docs/EVAL_PLAN.md` — metrics, gates, and hard-case expectations
-- `docs/DATASET_CARD.md` — data source, leakage, bias, and coverage notes
-- `docs/MODEL_CARD.md` — thresholds, limitations, and trust guidance
-- `docs/TOOL_CONTRACT.md` — exact callable schema
+- `docs/TASK_SPEC.md`
+- `docs/EVAL_PLAN.md`
+- `docs/DATASET_CARD.md`
+- `docs/MODEL_CARD.md`
+- `docs/TOOL_CONTRACT.md`
 
 ## Known limitations
 
-TODO: summarize distribution limits, known failure cases, confidence calibration limits, and cases requiring human or secondary verification.
+- replace-me
