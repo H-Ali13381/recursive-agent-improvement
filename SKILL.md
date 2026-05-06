@@ -64,14 +64,14 @@ Prefer:
 
 ## Available Hardware
 
-Current local training box:
+Fill this in for the machine running training:
 
-- CPU: AMD Ryzen 5 3600, 12 threads
-- RAM: 15 GiB
-- GPU: NVIDIA GeForce RTX 4070 SUPER, 12 GiB VRAM
-- CUDA: 13.2
+- CPU: replace-me CPU model and thread count
+- RAM: replace-me system RAM
+- GPU: replace-me GPU model and VRAM
+- CUDA/accelerator stack: replace-me CUDA, ROCm, MPS, CPU-only, or other runtime
 
-This is enough for small-to-medium specialist training: CNNs, compact Transformers, embedding classifiers, rerankers, audio detectors, image/layout evaluators, and LoRA/adapter-style experiments. Prefer 12 GB VRAM assumptions when estimating batch size, model size, and sweep budget.
+Use these values to estimate feasible model size, batch size, data volume, Optuna sweep budget, and whether a task fits local training or needs cloud hardware. Keep the committed GitHub version generic; the user's agent should replace these placeholders in a local copy.
 
 ## Tool Contract
 
