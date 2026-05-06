@@ -20,7 +20,7 @@ Then fill in the task-specific pieces in this order:
 5. `configs/search_space.yaml`
 6. `src/` implementation files
 7. `tools/` wrapper files
-8. `skills/` usage skill
+8. `SKILL_TEMPLATE.md` -> final `SKILL.md` for the trained tool
 
 ## Philosophy
 
@@ -87,15 +87,15 @@ Average metrics can hide catastrophic failures. Worst-case performance exposes f
 ## Directory map
 
 ```text
-configs/       YAML configs for defaults, sweeps, data, and runtime behavior
-data/          local raw/processed/interim data; ignored by git
-artifacts/     checkpoints, exported weights, thresholds, reports; ignored by git
-docs/          task spec, eval plan, dataset card, model card
-src/           future PyTorch implementation package; currently intentionally empty
-tests/         future tests and smoke checks
-tools/         future agent-facing inference wrapper
-templates/     reusable report/config/skill templates
-scripts/       future operational scripts
+SKILL_TEMPLATE.md  starter skill for the trained specialist tool
+configs/           YAML configs for defaults, sweeps, data, and runtime behavior
+data/              local raw/processed/interim data; ignored by git
+artifacts/         checkpoints, exported weights, thresholds, reports; ignored by git
+docs/              task spec, eval plan, dataset card, model card
+src/               future PyTorch implementation package; currently intentionally empty
+tests/             future tests and smoke checks
+tools/             future agent-facing inference wrapper
+scripts/           future operational scripts
 ```
 
 ## Non-goals for the template
