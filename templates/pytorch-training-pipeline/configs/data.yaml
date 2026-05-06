@@ -1,0 +1,28 @@
+# Dataset config skeleton.
+
+data:
+  raw_dir: data/raw
+  interim_dir: data/interim
+  processed_dir: data/processed
+  external_dir: data/external
+
+splits:
+  train: null
+  val: null
+  test: null
+  seed: 42
+  group_by: null  # speaker/user/source/document/etc. to avoid leakage
+
+labels:
+  schema: null
+  positive_labels: []
+  negative_labels: []
+
+hard_cases:
+  enabled: true
+  sources: []
+
+leakage_checks:
+  dedupe: true
+  split_by_group: true
+  inspect_near_duplicates: true

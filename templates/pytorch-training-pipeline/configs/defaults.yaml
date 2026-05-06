@@ -1,0 +1,40 @@
+# Default training/runtime config.
+# Fill this in only after TASK_SPEC and EVAL_PLAN are stable.
+
+project:
+  name: null
+  seed: 42
+  device: auto
+
+mode:
+  training_mode: quick  # quick | thorough
+
+paths:
+  data_root: data
+  artifact_root: artifacts
+  run_root: artifacts/runs
+
+model:
+  architecture: null
+  # Add task-specific architecture defaults here after a baseline exists.
+
+training:
+  max_epochs: null
+  batch_size: null
+  learning_rate: null
+  weight_decay: null
+  early_stopping_patience: null
+  num_workers: 0  # default to 0 for reliability and lower RAM overhead
+  pin_memory: true
+
+metrics:
+  primary: null
+  secondary: []
+  optimize: null  # maximize | minimize
+
+thresholding:
+  enabled: false
+  target_rate: null
+
+export:
+  format: null  # pt | safetensors | onnx | torchscript

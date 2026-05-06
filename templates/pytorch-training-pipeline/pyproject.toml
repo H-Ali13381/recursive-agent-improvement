@@ -1,0 +1,26 @@
+[project]
+name = "pytorch-specialist-template"
+version = "0.1.0"
+description = "Skeleton for a narrow PyTorch specialist model exposed as an agent tool."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+
+# Keep this minimal. Add task-specific dependencies only when implementation begins.
+dependencies = [
+    "torch",
+    "numpy",
+    "pyyaml",
+    "tqdm",
+    "scikit-learn",
+    "optuna",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "ruff",
+]
+
+[tool.ruff]
+line-length = 100

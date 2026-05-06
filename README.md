@@ -43,6 +43,17 @@ Skills
 
 The goal is not to make the LLM magically better by prompting. The goal is to build an expanding exocortex of narrow, trainable capabilities around the agent.
 
+## Templates
+
+This repo includes a cloneable skeleton for building new PyTorch specialist training projects:
+
+```bash
+cp -a templates/pytorch-training-pipeline ~/Documents/my-specialist-tool
+cd ~/Documents/my-specialist-tool
+```
+
+The template is intentionally implementation-free. It defines the structure, docs, configs, evaluation gates, artifact layout, and agent tool contract before task-specific PyTorch code is written.
+
 ## License
 
 MIT

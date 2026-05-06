@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+
+# Data and generated artifacts
+/data/raw/
+/data/interim/
+/data/processed/
+/data/external/
+/artifacts/checkpoints/
+/artifacts/exports/
+/artifacts/reports/
+/artifacts/runs/
+/artifacts/optuna/
+/logs/
+
+# Large ML artifacts
+*.pt
+*.pth
+*.safetensors
+*.onnx
+*.ckpt
+*.bin
+*.db
+*.sqlite
+*.sqlite3
+
+# Experiment trackers
+wandb/
+mlruns/
+lightning_logs/
+
+# OS/editor
+.DS_Store
+.idea/
+.vscode/
