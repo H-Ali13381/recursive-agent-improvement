@@ -1,6 +1,6 @@
 ---
 name: recursive-agent-improvement
-description: Use when designing agent capability extensions with specialist tools, small PyTorch models, evaluators, rerankers, classifiers, or training templates for narrow, measurable LLM weaknesses.
+description: Use when an agent repeatedly fails at a narrow measurable subtask, the user wants a trainable specialist tool instead of more prompting, or the task needs an evaluator, reranker, classifier, detector, verifier, or small PyTorch model exposed to an agent.
 ---
 
 # Recursive Agent Improvement
@@ -11,14 +11,29 @@ Build durable agent capabilities by turning repeated LLM failures into narrow, m
 
 ## When to Use
 
-Use this skill when:
+Trigger this skill on any of these signals:
 
-- An agent repeatedly fails at a narrow task.
-- The task has measurable inputs, outputs, and success criteria.
-- A small model, evaluator, reranker, classifier, or detector could help.
-- The result can be exposed through a tool and documented with a skill.
+- Repeated LLM failure: the agent keeps making the same bounded mistake despite clearer instructions.
+- Tool-over-prompt request: the user asks to add capability through a tool, model, evaluator, scorer, verifier, or skill instead of modifying base model weights.
+- Specialist architecture fit: the weak spot looks like classification, ranking, detection, scoring, extraction, calibration, anomaly detection, perception, or consistency checking.
+- Measurable artifact exists: inputs, expected outputs, success metrics, and failure cases can be written down before training.
+- Agent-control decision: the specialist output would change what the agent does next, such as accept/reject, rerank, abstain, ask for review, retry, or route to another tool.
+- Reusable pipeline need: the user wants a template for PyTorch training, hard-negative evaluation, Optuna sweeps, model cards, or JSON tool packaging.
 
-Do not use this for vague goals like “make the LLM smarter generally.” Narrow the task first.
+Good user-language triggers include:
+
+- “LLMs are bad at X; can we build a tool for it?”
+- “Train a small model/classifier/reranker/evaluator for this agent weakness.”
+- “Make the agent verify/score/detect this before claiming success.”
+- “Package this neural model as a Hermes tool/MCP/CLI with JSON output.”
+- “Create a reusable specialist training pipeline.”
+
+Do not use this when:
+
+- The goal is vague, like “make the LLM smarter generally.” Narrow the failure first.
+- A deterministic script, schema, regex, database query, or existing library solves the problem without training.
+- There is no realistic way to collect or label data, define a baseline, or evaluate held-out performance.
+- The task requires broad open-ended reasoning rather than a bounded specialist judgment.
 
 ## Core Pattern
 

@@ -1,6 +1,6 @@
 ---
 name: replace-me-specialist-tool
-description: Use when replace-me-trigger-condition.
+description: Use when replace-me-agent-failure-or-user-request; replace-me-required-input-is-available; replace-me-agent-decision-needs-this-specialist-score.
 version: 0.1.0
 author: replace-me
 license: MIT
@@ -16,15 +16,17 @@ This is a template. Replace every `replace-me` value before using it as a real s
 
 ## When to use
 
-- replace-me: concrete trigger condition
-- replace-me: valid input condition
-- replace-me: decision this specialist is meant to support
+- User/task signal: replace-me recurring agent failure, user request, or operational decision that should trigger this specialist.
+- Required input exists: replace-me artifact, text, image, audio, metadata, or structured record is available in the expected format.
+- Decision impact: replace-me agent action changes based on this result, such as accept/reject, rerank, retry, abstain, escalate, or route.
+- Evaluated scope: replace-me input is within the distribution and failure modes covered by `docs/EVAL_PLAN.md` and `docs/MODEL_CARD.md`.
 
 ## Do not use when
 
-- replace-me: out-of-scope condition
-- replace-me: invalid/missing input condition
-- replace-me: low-confidence or abstention condition
+- Out of scope: replace-me adjacent task, domain, language, modality, or open-ended reasoning case this specialist was not evaluated on.
+- Missing/invalid input: replace-me required artifact or field is unavailable, malformed, too large, or not preprocessed.
+- No decision impact: replace-me result would not change the agent's next action.
+- Low confidence/abstention: replace-me confidence, threshold, or error condition means the agent should verify another way instead.
 
 ## Tool contract
 
