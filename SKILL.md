@@ -62,6 +62,17 @@ Prefer:
 - checkpoints, logs, and resumable studies
 - memory-safe PyTorch defaults: `num_workers=0`, explicit cleanup, no weights in Optuna attrs
 
+## Available Hardware
+
+Current local training box:
+
+- CPU: AMD Ryzen 5 3600, 12 threads
+- RAM: 15 GiB
+- GPU: NVIDIA GeForce RTX 4070 SUPER, 12 GiB VRAM
+- CUDA: 13.2
+
+This is enough for small-to-medium specialist training: CNNs, compact Transformers, embedding classifiers, rerankers, audio detectors, image/layout evaluators, and LoRA/adapter-style experiments. Prefer 12 GB VRAM assumptions when estimating batch size, model size, and sweep budget.
+
 ## Tool Contract
 
 Specialist tools should return structured JSON:
