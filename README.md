@@ -48,11 +48,31 @@ The goal is not to make the LLM magically better by prompting. The goal is to bu
 This repo includes a cloneable skeleton for building new PyTorch specialist training projects:
 
 ```bash
-cp -a templates/pytorch-training-pipeline ~/Documents/my-specialist-tool
+cp -a assets/pytorch-training-pipeline ~/Documents/my-specialist-tool
 cd ~/Documents/my-specialist-tool
 ```
 
 The template is intentionally implementation-free. It defines the structure, docs, configs, evaluation gates, artifact layout, and agent tool contract before task-specific PyTorch code is written.
+
+## Related skill
+
+Use this with the Tier 1-2-3 Skill System:
+
+- https://github.com/H-Ali13381/tier-1-2-3-skill-system
+
+Tier 1-2-3 decides whether a workflow should stay text-only, become script-backed, or escalate to an ML/specialist pipeline. Recursive Agent Improvement is the companion for the Tier 3 path: building the specialist tool, evaluator, verifier, reranker, classifier, detector, or training pipeline.
+
+## For agents
+
+`SKILL.md` contains the agent-facing version of this model.
+
+Install directly from GitHub:
+
+```bash
+npx skills add H-Ali13381/recursive-agent-improvement
+```
+
+The root `SKILL.md` is canonical. A complete mirror copy also lives under `.agents/skills/recursive-agent-improvement/` so cross-client skill scanners can discover the skill with its bundled assets.
 
 ## License
 

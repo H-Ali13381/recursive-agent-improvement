@@ -7,7 +7,7 @@ It intentionally contains no implemented Python training code yet. The goal is t
 ## Clone/use pattern
 
 ```bash
-cp -a templates/pytorch-training-pipeline ~/Documents/my-specialist-tool
+cp -a assets/pytorch-training-pipeline ~/Documents/my-specialist-tool
 cd ~/Documents/my-specialist-tool
 ```
 
